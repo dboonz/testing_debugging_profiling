@@ -1,11 +1,9 @@
 """ Compute the factorial of a set of numbers stored in a file. """
+import numpy as np
 
 def factorial(n):
-    if n == 1:
-        return 1
-    else:
-        return factorial(n-1) * n
-
+    numbers = np.arange(1,n+1).astype(np.float)
+    return numbers.prod()
 
 def read_data(filename):
     numbers = []
